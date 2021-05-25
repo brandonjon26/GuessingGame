@@ -7,11 +7,29 @@ Console.WriteLine("");
 Console.Write("Your guess> ");
 string number = Console.ReadLine();
 
+string secretNumber = "42";
+
 if (string.IsNullOrWhiteSpace(number))
 {
     Console.WriteLine("Your loss, this game is fun!");
+    return;
+}
+else if (number == secretNumber)
+{
+    Console.WriteLine($"Your guess of {number} is CORRECT!");
 }
 else
 {
-    Console.WriteLine($"You guessed {number}");
+    Console.WriteLine($"{number} is incorrect... YOU SUCK!");
 }
+
+
+
+// if (number == secretNumber)
+// {
+//     Console.WriteLine($"Your guess of {number} is CORRECT!");
+// }
+// else
+// {
+//     Console.WriteLine($"{number} is incorrect... YOU SUCK!");
+// }
